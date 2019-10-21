@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+}
+
+.container > div {
+  flex: 0;
+}
+
+.container > div.search {
+  flex-grow: 1;
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+  }
+
+  .container > div {
+    flex: 1 1 50%;
+  }
+
+  .container > div.search {
+    flex-grow: 1;
+  }
+}

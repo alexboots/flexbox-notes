@@ -12,6 +12,7 @@ import { FlexColumn } from './flex/FlexColumn'
 import { FlexWrap } from './flex/FlexWrap'
 import { FlexGrowShrinkBasis } from './flex/FlexGrowShrinkBasis'
 import { FlexOrder } from './flex/FlexOrder'
+import { FlexNavExample } from './flex/FlexNavExample'
 
 import './App.css';
 
@@ -40,6 +41,9 @@ function App() {
               <li>
                 <Link to="/flex-order">FlexOrder</Link>
               </li>
+              <li>
+                <Link to="/flex-nav-example">FlexNavExample</Link>
+              </li>
             </ul>
           </nav>
 
@@ -60,6 +64,9 @@ function App() {
             </Route>
             <Route path="/flex-order">
               <FlexOrder />
+            </Route>
+            <Route path="/flex-nav-example">
+              <FlexNavExample />
             </Route>
             <Route path="/">
               asdf
