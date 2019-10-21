@@ -5,7 +5,7 @@ import './Flex-nav-example.css';
 export const FlexNavExample = (props) => (
   <>
     <h1> Flex Order </h1>
-    <nav className="container order">
+    <nav className="container nav-example">
       <div>Candy</div>
       <div>Dogs</div>
       <div>Buttons</div>

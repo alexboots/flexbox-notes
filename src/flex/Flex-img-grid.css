@@ -1,0 +1,18 @@
+.container.img-grid {
+  display: flex;
+  /*justify-content: center; */
+  align-items: stretch;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+.container > div  {
+  flex: 1 1 150px;
+}
+
+.container > div > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

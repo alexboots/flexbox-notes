@@ -13,6 +13,8 @@ import { FlexWrap } from './flex/FlexWrap'
 import { FlexGrowShrinkBasis } from './flex/FlexGrowShrinkBasis'
 import { FlexOrder } from './flex/FlexOrder'
 import { FlexNavExample } from './flex/FlexNavExample'
+import { FlexImgGrid } from './flex/FlexImgGrid'
+
 
 import './App.css';
 
@@ -44,6 +46,9 @@ function App() {
               <li>
                 <Link to="/flex-nav-example">FlexNavExample</Link>
               </li>
+              <li>
+                <Link to="/flex-img-grid">FlexImgGrid</Link>
+              </li>
             </ul>
           </nav>
 
@@ -67,6 +72,9 @@ function App() {
             </Route>
             <Route path="/flex-nav-example">
               <FlexNavExample />
+            </Route>
+            <Route path="/flex-img-grid">
+              <FlexImgGrid />
             </Route>
             <Route path="/">
               asdf
