@@ -1,7 +1,7 @@
-## Flex and Grid cheatsheet
+## Flex and Grid playground 
 
-Commented Flex.css and Grid.css containing cheatsheet for reference.
+Lots of components with heavliy commented CSS files explaining things
 
-Cheatsheet type version that doesn't cover flex grow / shrink / base:
+Cheatsheet type version (that doesn't include flex grow / shrink / base):
 
 https://github.com/alexboots/flexbox-cheatsheet
