@@ -1,0 +1,17 @@
+.container {
+  border: 3px solid #333;
+}
+.container div {
+  padding: 30px;
+}
+.container div:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.container div:nth-child(odd) {
+  background-color: #363636;
+  color: #fff;
+}
+.container div:nth-child(even) {
+  background-color: yellow;
+}

@@ -1,0 +1,14 @@
+.container.column {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  /*  ^ row switched'main access' and 'cross access'
+
+    Main access now goes 'top to bottom'
+    Cross Access now goes left to right
+  */
+
+  justify-content: center; /* Now vertically justifies' */
+  align-items: flex-start; /* Now horizontally aligns' */
+}
+

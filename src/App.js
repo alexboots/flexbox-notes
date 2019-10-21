@@ -1,24 +1,72 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import { FlexRow } from './flex/FlexRow'
+import { FlexColumn } from './flex/FlexColumn'
+import { FlexWrap } from './flex/FlexWrap'
+import { FlexGrowShrinkBasis } from './flex/FlexGrowShrinkBasis'
+import { FlexOrder } from './flex/FlexOrder'
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="grid">
+      <Router>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/flex-row">FlexRow</Link>
+              </li>
+              <li>
+                <Link to="/flex-column">FlexColumn</Link>
+              </li>
+              <li>
+                <Link to="/flex-wrap">FlexWrap</Link>
+              </li>
+              <li>
+                <Link to="/flex-grow-shrink-basis">FlexGrowShrinkBasis</Link>
+              </li>
+              <li>
+                <Link to="/flex-order">FlexOrder</Link>
+              </li>
+            </ul>
+          </nav>
+
+          {/* A <Switch> looks through its children <Route>s and
+              renders the first one that matches the current URL. */}
+          <Switch>
+            <Route path="/flex-row">
+              <FlexRow />
+            </Route>
+            <Route path="/flex-column">
+              <FlexColumn />
+            </Route>
+            <Route path="/flex-wrap">
+              <FlexWrap />
+            </Route>
+            <Route path="/flex-grow-shrink-basis">
+              <FlexGrowShrinkBasis />
+            </Route>
+            <Route path="/flex-order">
+              <FlexOrder />
+            </Route>
+            <Route path="/">
+              asdf
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,139 @@
+.container.grow-shrink-basis {
+  display: flex;
+}
+
+/* flex: 1; is actually shorthand for three other properties
+
+flex: 1; = actually setting all three of the below
+           this is actually saying:
+v
+flex: 1 1 0
+
+which is actually saying:;
+v
+flex-grow: 1;
+flex-shrink: 1;
+flex-basis:  0;
+
+
+All of the above are the same
+*/
+
+/*  WHAT  */
+
+.container.grow-shrink-basis div {
+  width: 400px;
+}
+
+  /*
+    flex-basis: 200px;
+
+      Elements will stay 200px no matter how wide container is.
+      Elements will shrink if container can't fit them
+  */
+
+
+/* UNCOMMENTABLE CSS: */
+
+/*
+.container.grow-shrink-basis div {
+  flex-grow: 1;
+}
+*/
+
+
+/* UNCOMMENTABLE CSS: */
+/*
+.hey {
+  flex-grow: 1;
+}
+
+.there {
+  flex-grow: 10;
+}
+*/
+  /*
+    flex-grow: [0, 1, 2, 3, 4]
+
+    default is '0'
+
+      Sets how much of the 'extra space' will be distributed among the items
+
+      [|Aa  |Bb  |     ]
+      0 - items will just take up how much width they (or how much flex-basis, or width defines)
+
+      [|Aa    ||Bb    |]
+      1 - items will share space with each other
+
+      [|Aa||Bb        |]
+        ^   ^
+        0   1 - 0 will do w/ and 1 will take up remaining space
+
+
+      [|Aa ||Bb       |]
+        ^   ^
+        1   10
+                ^ will grow 10 times faster than 1 here, the numbers always interrelate
+
+      [|Aa    ||Bb    |]
+        ^       ^
+        10      10
+      if you set them both to 10 it is the same as setting them both to 1 or 2 / 3 / whatever
+
+  */
+
+/* UNCOMMENTABLE CSS: */
+
+/*
+.hey,
+.there {
+  flex-shrink: 1;
+}
+*/
+
+/* UNCOMMENTABLE CSS: */
+
+/*
+.hey {
+  flex-shrink: 1;
+}
+.there {
+  flex-shrink: 5;
+}
+*/
+
+  /*
+    flex-shrink: [1, 1, 2, 3, 4]
+
+    default is '1'
+
+    flex-shrink: 0;
+      // Items will _not_ shrink to fit conatiner
+      [|Aa      ||Bb    ]  | < b will go over the end if its flex-basis is too wide for container
+        ^ 0       ^ 0
+
+      [|Aa  ||Bb        |]
+        ^ 1   ^ 0
+
+        0 will make the element not shrink - 1 will make it shrink 1
+
+      [|Aa  ||Bb        |]
+        ^ 1   ^ 5
+
+        5 will shrink 5 times faster than 1
+  */
+
+.hey,
+.there {
+  flex-basis: 200px;
+}
+
+.hey {
+  flex-grow: 10;
+}
+
+.there {
+  flex-grow: 1
+}
+
+

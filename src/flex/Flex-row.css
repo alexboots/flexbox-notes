@@ -1,0 +1,206 @@
+/* MAKE SURE ur IMPORTING Flex-row or Flex-col in Flex.js OR waste 5 mins figuring out why nothing is working */
+
+.container.row {
+  /* block element by default */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+/*
+  If many selectors - all available properies are listed [default|first|followed|by|other|options]
+*/
+
+/*
+flex-direction: [row|column];
+
+  flex-direction: row;
+    'Main access' = goes from left to right
+    'Cross access' = goes from up to down
+
+  flex-direction: column;
+    'Main access' = goes from top to bottom
+    'Cross access' = goes from left to right
+
+justify-content: [flex-start|flex-end|center|space-around|space-between|space-evenly];
+
+  justify-content: flex-start;
+    [ThingThingThing            ]
+
+    content is bunched up at start (normal, like you'd expect - pretty much like inline-block elements)
+
+  justify-content: flex-end;
+    [            ThingThingThing]
+
+    content is bunched up at end of row (or col)
+
+  justify-content: center;
+    [      ThingThingThing      ]
+
+    content is dead center (sorta like margin: 0 auto)
+
+  justify-content: space-around;
+    [  Thing    Thing    Thing  ]
+
+    equal amount of space on left and right handside of each element
+
+  justify-content: space-evenly;
+    [   Thing   Thing   Thing   ]
+
+    start and between spacing is even
+
+
+  justify-content: space-between;
+    [Thing      Thing      Thing]
+
+    first and last element hug container, even spacing between all other elements
+
+*/
+
+/* UNCOMMENTABLE CSS: */
+/*
+
+.logout {
+  margin-left: auto;
+}
+*/
+
+/*
+Using Margins
+  Position single items within the flow: USINHG MARGIN THAT GOOD Ol' DEVIL OF A THING
+    container => jusifty-content: flex-start;
+    child     => margin-left: auto;
+                             v has auto
+      [ThingThing            Thing]
+
+                        v has auto
+      [Thing            ThingThing]
+
+    container => jusifty-content: flex-end;
+    child     => margin-right: auto;
+       v has auto
+      [Thing            ThingThing]
+
+      Sets whole space to the left of it as auto
+*/
+
+
+/* UNCOMMENTABLE CSS: */
+
+/*
+.container.row > div {
+  flex: 1
+}
+*/
+/*
+.container.row > div.search {
+  flex: 2
+}
+*/
+
+/*
+flex: [1|2|3|4|5|6|...so on]
+
+  Allows you to set items width in respect to container width, + they will grow and shrink with container
+
+  flex: 1;
+
+    make the divs evenly width'ed. Say you have 3 items - same as doing width: 33.3333%; or 4 items with 25%
+    THATS HELLA TIGHT
+
+  flex: 2; wtf???
+
+    takes up TWICE AS MUCH SPACE as teh things with flex: 2;
+
+    WHY GOD IS THAT THE CASE - because it just is ok smh
+
+  It's actually more common to have one item do all of the flexing, and have everything else
+  stay at a fixed with - just like that one dude in the group who's always flexin and everyone else is stayin fixed witdh.
+
+  But - we commenetd out flex: 1 above, and notice that only .search grows and shrinks with the conatiner size now, other elements stay their width.
+
+  When there is only one item doing the 'flexing' it doens't matter if its 1, 2, 3, 100, its all the same bb
+*/
+
+
+/* UNCOMMENTABLE CSS: */
+
+.container.row {
+  height: 400px;
+  /*align-items: center;*/
+}
+
+/*
+align-items: [stretch | flex-start]
+
+  Controls items across the 'cross access'
+
+  align-items: stretch;
+     ___________
+    [|Aa|Bb|Cc  ]
+    [|  |  |    ]
+    [|__|__|____]
+
+    children match container's height
+
+  align-items: flex-start;
+    [|Aa|Bb|Cc__]
+    [           ]
+    [           ]
+
+    children keep their own height, hug the TOP of the cross axis
+
+  align-items: flex-end;
+    [           ]
+    [           ]
+    [|Aa|Bb|Cc__]
+
+    children keep their own height, hug the BOTTOM of the cross axis
+
+  align-items: center;
+    [           ]
+    [|Aa|Bb|Cc__]
+    [           ]
+
+  children keep their own height, hug the CENTER of the cross axis
+
+  Flexbox is GOD at centering a thing inside a container;
+    as you can center along the Main and Cross access, and it doens't matter if the container is re-sized
+
+  .container.row {
+    justify-content: center;
+    align: items: center;
+  }
+
+  <container>
+    <div>x</div>
+  </container>
+
+  [           ]
+  [    |x|    ]
+  [           ]
+
+*/
+
+/* UNCOMMENTABLE CSS: */
+
+.logout {
+  align-self: flex-end;
+}
+
+/*
+  align-self: [flex-start|center|flex-end]
+
+         v has align-self: flex-start;
+    [   |Bb|     ]
+    [|Aa|  |Cc__]
+    [           ]
+
+    Place align-self on a child of a flex element and it can position itself
+
+    [           ]
+    [|Aa|  |Cc__]
+    [   |Bb|    ]
+         ^ has align-self: flex-start;
+*/
+
+
