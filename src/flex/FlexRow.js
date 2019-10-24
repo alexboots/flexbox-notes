@@ -5,7 +5,7 @@ import './Flex-row.css';
 export const FlexRow = (props) => (
   <>
   <h1> Flex Row </h1>
-  <nav className="container row">
+  <nav className="flex-container row">
     <div>see no evil</div>
     <div>see no evil</div>
     <div className="logout">see no evil</div>

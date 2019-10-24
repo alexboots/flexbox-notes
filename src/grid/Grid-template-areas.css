@@ -1,0 +1,33 @@
+.grid-template-areas .grid-container {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px auto 40px;
+  /* Use a string to define names for rows
+  and columns we have defined above  ^ v */
+  grid-template-areas:
+    "m h h h h h h h h . . ." /* . = blank cell ! */
+    "m c c c c c c c c c c c"
+    "m f f f f f f f f f f f";
+
+  /* Only valid rectangles work! */
+
+  /* ^ Visual representation of our grid */
+  /* This is seriously whack and badass at the same time */
+}
+
+.grid-template-areas .header {
+  grid-area: h;
+}
+
+.grid-template-areas .menu {
+  grid-area: m;
+}
+
+.grid-template-areas .content {
+  grid-area: c;
+}
+
+.grid-template-areas .footer {
+  grid-area: f;
+}

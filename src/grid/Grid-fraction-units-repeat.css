@@ -1,0 +1,28 @@
+/*
+  1fr = one fraction unit
+  splits grid up into equal stretchy fraction units.
+
+  if you set something to 2fr, it will take up twice as much space
+  as 1ft.
+*/
+
+.grid-fractin-units-repeat .grid-container {
+  display: grid;
+  /* grid-template-columns: 1fr 2fr 1fr;*/
+  /* grid-template-columns: 1fr 1fr 1fr;*/
+  /* ^ this can be rewritten as V */
+  grid-template-columns: repeat(3, 1fr);
+                              /*^ 3 columns, 1fr each*/
+  /* V  height of rows */
+  grid-template-rows: repeat(2, 50px);
+
+  grid-gap: 30px;
+
+}
+
+/* All of the above can be further simplified as */
+.grid-fractin-units-repeat .grid-container {
+  display: grid;
+                      /*  rows v  /  cols v  */
+  grid-template: repeat(2, 50px) / repeat(3, 1fr);
+}

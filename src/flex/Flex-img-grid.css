@@ -1,4 +1,4 @@
-.container.img-grid {
+.flex-container.img-grid {
   display: flex;
   /*justify-content: center; */
   align-items: stretch;
@@ -7,16 +7,16 @@
   flex-wrap: wrap;
 }
 
-.container > div > img {
+.flex-container > div > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.container > div.normal  {
+.flex-container > div.normal  {
   flex: 1 1 150px;
 }
 
-.container > div.big  {
+.flex-container > div.big  {
   flex: 1 1 250px;
 }

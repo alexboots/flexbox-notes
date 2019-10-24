@@ -5,7 +5,7 @@ import './Flex-img-grid.css';
 export const FlexImgGrid = (props) => (
   <>
     <h1> Flex Img Grid </h1>
-    <div className="container img-grid">
+    <div className="flex-container img-grid">
       <div className="normal"><img src="https://picsum.photos/200"></img></div>
       <div className="normal"><img src="https://picsum.photos/300/200"></img></div>
       <div className="big"><img src="https://picsum.photos/400"></img></div>

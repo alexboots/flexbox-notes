@@ -5,7 +5,7 @@ import './Flex-column.css';
 export const FlexColumn = (props) => (
   <>
     <h1> Flex Column </h1>
-    <nav className="container column">
+    <nav className="flex-container column">
       <div>see no evil</div>
       <div>see no evil</div>
       <div>see no evil</div>

@@ -1,4 +1,4 @@
-.container.grow-shrink-basis {
+.flex-container.grow-shrink-basis {
   display: flex;
 }
 
@@ -21,22 +21,22 @@ All of the above are the same
 
 /*  WHAT  */
 
-.container.grow-shrink-basis div {
+.flex-container.grow-shrink-basis div {
   width: 400px;
 }
 
   /*
     flex-basis: 200px;
 
-      Elements will stay 200px no matter how wide container is.
-      Elements will shrink if container can't fit them
+      Elements will stay 200px no matter how wide flex-container is.
+      Elements will shrink if flex-container can't fit them
   */
 
 
 /* UNCOMMENTABLE CSS: */
 
 /*
-.container.grow-shrink-basis div {
+.flex-container.grow-shrink-basis div {
   flex-grow: 1;
 }
 */
@@ -109,7 +109,7 @@ All of the above are the same
 
     flex-shrink: 0;
       // Items will _not_ shrink to fit conatiner
-      [|Aa      ||Bb    ]  | < b will go over the end if its flex-basis is too wide for container
+      [|Aa      ||Bb    ]  | < b will go over the end if its flex-basis is too wide for flex-container
         ^ 0       ^ 0
 
       [|Aa  ||Bb        |]

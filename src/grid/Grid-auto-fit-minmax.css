@@ -1,0 +1,42 @@
+.grid-auto-fit-minmax .grid-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: repeat(2, 100px);
+
+
+  grid-template-columns: repeat(auto-fit, 100px);
+  /*
+    auto-fit = fill up with as many as you can
+
+    The Problem with this is you may end up with something
+    like this:
+                        v there is SPACE left over weirdly
+    |[ Aa ][ Bb ][ Cc ]  |
+    |[ Ee ][ Ff ]        |
+
+    The fix for this is to use the minmax unit
+
+  */
+
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+  /* This beutifully little well thought out thing makes it so the
+     column won't shrink below 100px but it will stretch to fit the
+     container if 100px doesn't fit it!
+
+     Will always fill in the whole row, and will keep other cols
+     the same width:
+      |[  Aa  ][  Bb  ][  Cc  ]|
+      |[  Ee  ][  Ff  ]        |
+  */
+
+  /*
+    ROW ISSUE WITH THIS:
+    you don't know how many rows you end up with
+      so doing grid-template-rows: repeat(2, 100px); isn't enough.
+      Rows below the 2nd won't get set to 100px.
+  */
+
+  grid-auto-rows: 100px;
+  /* Well that was an easy fix */
+}

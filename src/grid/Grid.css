@@ -1,0 +1,54 @@
+/* base */
+.grid-container > div {
+  padding: 10px;
+  border: 3px solid yellow;
+}
+
+.grid .grid-container {
+  display: grid;
+  /* V width of columsn */
+  grid-template-columns: 100px auto;
+  /* auto = column will take up remaining space in the width */
+
+  /* V  height of rows */
+  grid-template-rows: 50px 50px 50px;
+
+  grid-gap: 30px;
+
+  /*
+
+    Defining columns and rows defines how things will look
+
+    Define three columsn = will be three columns
+    Define three rows = will be three rows
+
+      grid-template-columns: 100px 100px 100px;
+      grid-template-rows: 50px 50px;
+
+      [   Aa   ][   Bb   ][   Cc   ]
+      [   Aa   ][   Bb   ][   Cc   ]
+
+
+    VS
+
+      grid-template-columns: 100px 100px;
+      grid-template-rows: 50px 50px 50px;
+
+      [   Aa   ][   Bb   ]
+      [   Cc   ][   Aa   ]
+      [   Bb   ][   Cc   ]
+
+
+      "Auto" says 'take up as much of the space as you can for columns
+
+        grid-template-columns: 100px 100px auto;
+        grid-template-rows: 50px 50px;
+
+      [   Aa   ][   Bb   ][             Cc             ]
+      [   Aa   ][   Bb   ][             Cc             ]
+
+  */
+
+
+}
+

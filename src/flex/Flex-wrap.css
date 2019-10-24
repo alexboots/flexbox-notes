@@ -1,26 +1,26 @@
-.container.stuff {
+.flex-container.stuff {
   /*height: 400px;*/
   display: flex;
   flex-wrap: wrap;
 }
 
-.container.stuff > div {
+.flex-container.stuff > div {
   width: 500px;
-  /* ^ Will not exceed the size of the container, will be sized down so all
-       elements fit within the containers width (responsive, sorta kinda sorta)
+  /* ^ Will not exceed the size of the flex-container, will be sized down so all
+       elements fit within the flex-containers width (responsive, sorta kinda sorta)
 
-       If we DO want the elements to keep their width, we can set 'flex-wrap: wrap;' on the Container
+       If we DO want the elements to keep their width, we can set 'flex-wrap: wrap;' on the flex-container
 
     flex-wrap: [wrap | no-wrap];
 
       This will make each element wrap around and keep their width if their is space 
       Will still shrink down elements if they do not fit 
 
-      .container {
+      .flex-container {
         flex-wrap: wrap;
       }
 
-      .container div {
+      .flex-container div {
         width: 6 spaces (idk thats what each example element is below)
       }
         [|Aa    ||Bb    |   ]

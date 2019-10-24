@@ -1,6 +1,6 @@
 /* MAKE SURE ur IMPORTING Flex-row or Flex-col in Flex.js OR waste 5 mins figuring out why nothing is working */
 
-.container.row {
+.flex-container.row {
   /* block element by default */
   display: flex;
   flex-direction: row;
@@ -52,7 +52,7 @@ justify-content: [flex-start|flex-end|center|space-around|space-between|space-ev
   justify-content: space-between;
     [Thing      Thing      Thing]
 
-    first and last element hug container, even spacing between all other elements
+    first and last element hug flex-container, even spacing between all other elements
 
 */
 
@@ -67,7 +67,7 @@ justify-content: [flex-start|flex-end|center|space-around|space-between|space-ev
 /*
 Using Margins
   Position single items within the flow: USINHG MARGIN THAT GOOD Ol' DEVIL OF A THING
-    container => jusifty-content: flex-start;
+    flex-container => jusifty-content: flex-start;
     child     => margin-left: auto;
                              v has auto
       [ThingThing            Thing]
@@ -75,7 +75,7 @@ Using Margins
                         v has auto
       [Thing            ThingThing]
 
-    container => jusifty-content: flex-end;
+    flex-container => jusifty-content: flex-end;
     child     => margin-right: auto;
        v has auto
       [Thing            ThingThing]
@@ -87,12 +87,12 @@ Using Margins
 /* UNCOMMENTABLE CSS: */
 
 /*
-.container.row > div {
+.flex-container.row > div {
   flex: 1
 }
 */
 /*
-.container.row > div.search {
+.flex-container.row > div.search {
   flex: 2
 }
 */
@@ -100,7 +100,7 @@ Using Margins
 /*
 flex: [1|2|3|4|5|6|...so on]
 
-  Allows you to set items width in respect to container width, + they will grow and shrink with container
+  Allows you to set items width in respect to flex-container width, + they will grow and shrink with flex-container
 
   flex: 1;
 
@@ -124,7 +124,7 @@ flex: [1|2|3|4|5|6|...so on]
 
 /* UNCOMMENTABLE CSS: */
 
-.container.row {
+.flex-container.row {
   height: 400px;
   /*align-items: center;*/
 }
@@ -140,7 +140,7 @@ align-items: [stretch | flex-start]
     [|  |  |    ]
     [|__|__|____]
 
-    children match container's height
+    children match flex-container's height
 
   align-items: flex-start;
     [|Aa|Bb|Cc__]
@@ -163,17 +163,17 @@ align-items: [stretch | flex-start]
 
   children keep their own height, hug the CENTER of the cross axis
 
-  Flexbox is GOD at centering a thing inside a container;
-    as you can center along the Main and Cross access, and it doens't matter if the container is re-sized
+  Flexbox is GOD at centering a thing inside a flex-container;
+    as you can center along the Main and Cross access, and it doens't matter if the flex-container is re-sized
 
-  .container.row {
+  .flex-container.row {
     justify-content: center;
     align: items: center;
   }
 
-  <container>
+  <flex-container>
     <div>x</div>
-  </container>
+  </flex-container>
 
   [           ]
   [    |x|    ]

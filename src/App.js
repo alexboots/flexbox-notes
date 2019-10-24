@@ -15,16 +15,22 @@ import { FlexOrder } from './flex/FlexOrder'
 import { FlexNavExample } from './flex/FlexNavExample'
 import { FlexImgGrid } from './flex/FlexImgGrid'
 
+import { Grid } from './grid/Grid'
+import { GridFractionUnitsRepeat } from './grid/GridFractionUnitsRepeat'
+import { GridPositioning } from './grid/GridPositioning'
+import { GridTemplateAreas } from './grid/GridTemplateAreas'
+import { GridAutoFitMinmax } from './grid/GridAutoFitMinmax'
+import { GridImageGrid } from './grid/GridImageGrid'
 
 import './App.css';
 
 function App() {
   return (
-    <div className="grid">
+    <div>
       <Router>
         <div>
           <nav>
-            <ul>
+            <ul style={{ fontSize: "12px", listStyleType: "none" }}>
               <li>
                 <Link to="/">Home</Link>
               </li>
@@ -49,6 +55,25 @@ function App() {
               <li>
                 <Link to="/flex-img-grid">FlexImgGrid</Link>
               </li>
+              <li>
+                <Link to="/grid">Grid</Link>
+              </li>
+              <li>
+                <Link to="/grid-fraction-units-repeat">GridFractionUnitsRepeat</Link>
+              </li>
+              <li>
+                <Link to="/grid-positioning">GridPositioning</Link>
+              </li>
+              <li>
+                <Link to="/grid-template-areas">GridTemplateAreas</Link>
+              </li>
+              <li>
+                <Link to="/grid-auto-fit-minmax">GridAutoFitMinmax</Link>
+              </li>
+              <li>
+                <Link to="/grid-image-grid">GridImageGrid</Link>
+              </li>
+
             </ul>
           </nav>
 
@@ -75,6 +100,24 @@ function App() {
             </Route>
             <Route path="/flex-img-grid">
               <FlexImgGrid />
+            </Route>
+            <Route path="/grid">
+              <Grid />
+            </Route>
+            <Route path="/grid-fraction-units-repeat">
+              <GridFractionUnitsRepeat />
+            </Route>
+            <Route path="/grid-positioning">
+              <GridPositioning />
+            </Route>
+            <Route path="/grid-template-areas">
+              <GridTemplateAreas />
+            </Route>
+            <Route path="/grid-auto-fit-minmax">
+              <GridAutoFitMinmax />
+            </Route>
+            <Route path="/grid-image-grid">
+              <GridImageGrid />
             </Route>
             <Route path="/">
               asdf

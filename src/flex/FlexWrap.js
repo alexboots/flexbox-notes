@@ -5,7 +5,7 @@ import './Flex-wrap.css';
 export const FlexWrap = (props) => (
   <>
   <h1> Flex Wrap </h1>
-  <nav className="container stuff">
+  <nav className="flex-container stuff">
     <div>see no evil</div>
     <div>see no evil</div>
     <div>see no evil</div>

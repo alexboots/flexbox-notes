@@ -1,0 +1,59 @@
+.grid-positioning .grid-container {
+  display: grid;
+  /*grid-template-columns: repeat(2, 1fr);*/
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 50px 300px 80px;
+
+}
+
+
+.grid-positioning .header {
+  /* Start at 1st column line and end at 3rd column line */
+
+  /*
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    same as V
+  */
+
+  /*grid-column: 1 / 3;*/
+  /*grid-column: 1 / 3;*/
+  grid-column: 2 / -1;
+
+
+  /*
+    "Column line" is the lines in a layout so
+    2 columsn has 3 lines
+    | one     | two     | three
+    [   Aa   ] [   Bb   ]
+  */
+}
+
+.grid-positioning .menu {
+  grid-row: 1 / 3;
+}
+
+.grid-positioning .content {
+  grid-column: 2 / -1;
+}
+
+.grid-positioning .footer {
+  /*
+    You can also tell it to 'span over two columns' instead of
+    telling it the colum line to go to
+  */
+  /*grid-column: 1 / 3;*/
+
+  /* Same as: */
+  /*grid-column: 1 / span 2;*/
+
+  /* Can also do -1, which is 'to the last column' */
+  /* Same as */
+  grid-column: 1 / -1;
+  /* ^ nice to use when we dont have how many columns
+       we are going to have finally
+  */
+}
+
+/* tl;dr: grid-row and grid-column is powerful af */

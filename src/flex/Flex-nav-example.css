@@ -1,26 +1,26 @@
-.container.nav-example {
+.flex-container.nav-example {
   display: flex;
 }
 
-.container > div {
+.flex-container > div {
   flex: 0;
 }
 
-.container > div.search {
+.flex-container > div.search {
   flex-grow: 1;
 }
 
 @media all and (max-width: 600px) {
-  .container {
+  .flex-container {
     /* flex-direction: column; */
     flex-wrap: wrap;
   }
 
-  .container > div {
+  .flex-container > div {
     flex: 1 1 50%;
   }
 
-  .container > div.search {
+  .flex-container > div.search {
     flex-grow: 1;
   }
 }
