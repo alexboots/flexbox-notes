@@ -40,7 +40,7 @@
 /****/
 
 .grid-align-justify-items .grid-container {
-  height: 1000px;
+  height: 400px;
   display: grid;
 
   grid-template-columns: repeat(3, 200px);
@@ -48,6 +48,27 @@
   justify-items: center;
   align-items: center; /* Can also use this bb's */
   /* Can also  do 'justify-self' on the individual items !! */
+}
+
+/****/
+/****/
+/* auto-FIT vs auto-FILL */
+.grid-auto-fit .grid-container {
+  display: grid;
+
+  /* Fit = fills WHOLE CONTAINER
+    (actually adds new cols and collaspes them to 0px in width)
+  */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 100px);
+}
+
+.grid-auto-fill .grid-container {
+  display: grid;
+
+  /* Fill = adds empty 'new columns' to fill up rest of screen and keeps cols around 300px */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, 100px);
 }
 
 

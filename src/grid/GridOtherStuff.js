@@ -30,5 +30,23 @@ export const GridOtherStuff = (props) => (
         <div className="footer">footer</div>
       </nav>
     </div>
+    <div className="grid-auto-fit">
+      <h1> Grid Auto Fit </h1>
+      <nav className="grid-container">
+        <div className="header">header</div>
+        <div className="menu">menu</div>
+        <div className="content">content</div>
+        <div className="footer">footer</div>
+      </nav>
+    </div>
+    <div className="grid-auto-fill">
+      <h1> Grid Auto Fill</h1>
+      <nav className="grid-container">
+        <div className="header">header</div>
+        <div className="menu">menu</div>
+        <div className="content">content</div>
+        <div className="footer">footer</div>
+      </nav>
+    </div>
   </>
 )
