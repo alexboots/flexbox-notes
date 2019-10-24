@@ -21,6 +21,7 @@ import { GridPositioning } from './grid/GridPositioning'
 import { GridTemplateAreas } from './grid/GridTemplateAreas'
 import { GridAutoFitMinmax } from './grid/GridAutoFitMinmax'
 import { GridImageGrid } from './grid/GridImageGrid'
+import { GridOtherStuff } from './grid/GridOtherStuff'
 
 import './App.css';
 
@@ -73,7 +74,9 @@ function App() {
               <li>
                 <Link to="/grid-image-grid">GridImageGrid</Link>
               </li>
-
+              <li>
+                <Link to="/grid-other-stuff">GridOtherStuff</Link>
+              </li>
             </ul>
           </nav>
 
@@ -118,6 +121,9 @@ function App() {
             </Route>
             <Route path="/grid-image-grid">
               <GridImageGrid />
+            </Route>
+            <Route path="/grid-other-stuff">
+              <GridOtherStuff />
             </Route>
             <Route path="/">
               asdf

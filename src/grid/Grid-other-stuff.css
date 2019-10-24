@@ -1,0 +1,55 @@
+/* COOL NAMING OF GRID AREAS STUFF */
+.grid-named-sections .grid-container {
+  display: grid;
+  /* You can name the start and end of cols */
+  grid-template-columns: [main-start] 1fr [content-start] 5fr [content-end main-end];
+  grid-template-rows: [main-start] 40px [content-start] auto [content-end] 50px [main-end];
+
+}
+
+.grid-named-sections .header {
+  /* This is pretty wild you can do this */
+  /* grid-column: main-start / main-end; */
+  grid-column: main;
+}
+
+.grid-named-sections .content {
+  /*grid-column: content-start / main-end;*/
+  /* Can simply use  'content' here because of using the - in the name. */
+  grid-column: content;
+}
+
+.grid-named-sections .footer {
+  grid-column: main;
+}
+
+/****/
+/****/
+
+.grid-align-justify-grid .grid-container {
+  height: 1000px;
+  display: grid;
+
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  justify-content: space-evenly; /* Can use all thos ethings to space cells! */
+  align-content: center;
+}
+
+/****/
+/****/
+
+.grid-align-justify-items .grid-container {
+  height: 1000px;
+  display: grid;
+
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  justify-items: center;
+  align-items: center; /* Can also use this bb's */
+  /* Can also  do 'justify-self' on the individual items !! */
+}
+
+
+
+
